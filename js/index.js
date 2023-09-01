@@ -39,8 +39,8 @@ const handleLoadVideos = async (categoryId) => {
         <div class="card bg-base-100 px-3">
         <figure class = "relative">
           <img class="h-52 w-96" src=${video?.thumbnail}>
-          <div class="absolute bottom-0 right-1 mx-auto px-auto bg-black bg-opacity-70 text-white p-2">
-          ${timeZone(video?.others?.posted_date)}
+          <div class="absolute bottom-2 right-2 lg:right-4 bg-black bg-opacity-70 text-white">
+          ${(video?.others?.posted_date) ? timeZone(video?.others?.posted_date) : ''}
           </div>
         </figure>
         <div class="card-body">
@@ -72,12 +72,9 @@ const handleLoadVideos = async (categoryId) => {
 };
 
 
-function timeZone(sec){
+const timeZone = sec => {
   let hrs = Math.floor(sec/3600)
   let mins = Math.floor((sec % 3600) / 60)
-  if (hrs === 0 && mins === 0) {
-    return'';
-  }
   return `<div> ${hrs} hrs ${mins} min ago </div>`
 }
 
