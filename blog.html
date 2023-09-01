@@ -9,21 +9,41 @@
 <body>
     <section>
         <div class="mx-8 my-8">
-            <h2 class="text-2xl font-semibold">1. Discuss the scope of 'var', 'let', and 'const'</h2>
-            <p><span  class="text-xl font-normal">var:</span></p>
-            <p><span  class="text-xl font-normal">let:</span></p>
-            <p><span  class="text-xl font-normal">const:</span></p>
+            <h2 class="text-2xl font-semibold">1. Discuss the scope of 'var', 'let', and 'const'.</h2>
+
+            <p class="px-6 py-4 lg:w-2/4"><span  class="text-red-600 text-xl font-normal underline underline-offset-4">- var scoped :</span> This scoped available through the whole window otherwise only with the function where they declared.Var declare globally scoped.They can be accessed before declared but their value will be undefined.</p>
+
+            <p class="px-6 lg:w-2/4"><span class="text-red-600 text-xl font-normal underline underline-offset-4">- let scoped :</span> This scoped available with curly braces where its declared.This is a block scoped declarations.'let' declarations are not hoisted.Its temporal dead zone from the start of the block until they are declared and initialized.Its mean that the result will ReferenceError when any attempts to access them before they are declared</p>
+
+            <p class="px-6 py-4 lg:w-2/4"><span  class="text-red-600 text-xl font-normal underline underline-offset-4">- const scoped :</span> This scoped are also a block scoped but it can't be reassigned or re-declared.'const' declarations are also not hoisted.Its also temporal dead zone from the start of the block until they are declared and initialized.Its mean that the result will ReferenceError when any attempts to access them before they are declared. <br> 'let' & 'const' declarations are mostly same.</p>
         </div>
 
         <div class="mx-8 my-8">
-            <h2 class="text-2xl font-semibold">2. Tell us the use cases of 'null' and 'undefined'</h2>
-            <p><span  class="text-lg font-normal">null:</span></p>
-            <p><span  class="text-xl font-normal">undefined:</span></p>
+            <h2 class="text-2xl font-semibold">2. Tell us the use cases of 'null' and 'undefined'.</h2>
+
+            <p class="px-6 pt-4 lg:w-3/4">Null and undefined are both used to represent an empty value in JavaScript, but they have different meanings and use cases. </p>
+
+            <p class="px-6 py-4 lg:w-2/4"><span  class="text-red-600 text-xl font-normal underline underline-offset-4">- null :</span> <br> 
+                <ol class="list-disc list-inside px-10">
+                    <li> 'null' is usually assigned by a programmer to indicate that a variable intentionally has no value.</li>
+                    <li> It is an object type.</li>
+                    <li> When you want to indicate that a variable is expected to hold an object or value later in the program but doesn't yet have a meaningful value, you can initialize it with null.</li>
+                </ol>
+            </p>
+                <p class="px-6 py-4 lg:w-2/4"><span  class="text-red-600 text-xl font-normal underline underline-offset-4">- undefined :</span> <br> 
+                   
+                    <ol class="list-disc list-inside px-10">
+                        <li> undefined means that a variable has not been assigned any value yet.</li>
+                        <li> It is a type of its own.</li>
+                        <li> If you try to access an object property that doesn't exist, it will return undefined.</li>
+                    </ol>
+                </p>
         </div>
+
 
         <div class="mx-8 my-8">
             <h2 class="text-2xl font-semibold">3. What do you mean by REST API?</h2>
-            <p><span  class="text-xl font-normal">REST API:</span></p>
+            <p class="px-6 py-4 lg:w-2/4"><span  class="text-red-600 text-xl font-normal underline underline-offset-4">- REST API :</span> REST API means Representational State Transfer Application Programming Interface.</p>
         </div>
     </section>
 </body>

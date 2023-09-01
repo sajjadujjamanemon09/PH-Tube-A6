@@ -13,6 +13,7 @@ const handleMenuCategory = async () => {
 
     tabContainer.appendChild(div);
   });
+  console.log(data.data);
 };
 
 const handleLoadVideos = async (categoryId) => {
