@@ -37,8 +37,11 @@ const handleLoadVideos = async (categoryId) => {
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="card bg-base-100 px-3">
-        <figure>
+        <figure class = "relative">
           <img class="h-52 w-96" src=${video?.thumbnail}>
+          <div class="absolute bottom-0 right-1 mx-auto px-auto bg-black bg-opacity-70 text-white p-2">
+          ${timeZone(video?.others?.posted_date)}
+          </div>
         </figure>
         <div class="card-body">
           <h2 class="card-title">
@@ -68,9 +71,18 @@ const handleLoadVideos = async (categoryId) => {
   });
 };
 
+
+function timeZone(sec){
+  let hrs = Math.floor(sec/3600)
+  let mins = Math.floor((sec % 3600) / 60)
+  if (hrs === 0 && mins === 0) {
+    return'';
+  }
+  return `<div> ${hrs} hrs ${mins} min ago </div>`
+}
+
 handleMenuCategory();
 handleLoadVideos(1000);
-
 
 
 
