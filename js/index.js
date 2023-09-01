@@ -25,6 +25,14 @@ const handleLoadVideos = async (categoryId) => {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
 
+  const drawingCategory = document.getElementById("drawing-category")
+  if(data.data.length === 0){
+    drawingCategory.classList.remove('hidden')
+  }
+  else{
+    drawingCategory.classList.add('hidden')
+  }
+
   data.data?.forEach((video) => {
     const div = document.createElement("div");
     div.innerHTML = `
