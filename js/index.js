@@ -22,16 +22,6 @@ const handleVideos = async (categoryId) => {
   );
   const data = await response.json();
 
-  data.data.sort((a, b) => {
-    const parseView = (str) => {
-      const multiplier = str.endsWith("k") ? 1000: 1; 
-      return parseInt(str.replace(/k/g, "")) * multiplier;
-    };
-    const viewsA = parseView(a.others.views);
-    const viewsB = parseView(b.others.views);
-    return viewsB - viewsA;
-    });
-
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
 
